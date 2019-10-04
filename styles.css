@@ -1,11 +1,16 @@
+.clear {
+    clear: both; 
+}
+
 body {
-    font-family: sans-serif; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px; 
+    background-color: #F1F9FF;
 }
 header {
     margin-bottom: 20px; 
     padding: 20px; 
-    border-bottom: 1px solid rgb(0, 174, 255)
+    border-bottom: 2px dotted rgb(0, 174, 255)
 }
 header h1 {
     font-size: 2em; 
@@ -27,5 +32,22 @@ a:hover {
 
 .project {
     margin-bottom: 20px; 
-    border-bottom: 1px dashed rgb(0, 174, 255);
+    border-bottom: 2px dotted rgb(0, 174, 255);
+}
+.project img, #aboutme img {
+    width: 250px; 
+    float: left; 
+    margin-right: 10px; 
+    margin-bottom: 10px;
+}
+
+.project h2, #aboutme h2 {
+    font-size: 1.5em; 
+    margin-bottom: 10px; 
+}
+
+#projects, #aboutme {
+    margin: 0 auto; 
+    width: 90%; 
+    max-width: 800px;
 }
