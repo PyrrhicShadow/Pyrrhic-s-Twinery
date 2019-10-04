@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Not Weird. Queer" startnode="5" creator="Twine" creator-version="2.3.4" ifid="4D1DEAD6-0EBE-4CB4-975F-58F9E0843DE9" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Choice" color="blue"></tw-tag>,<tw-tag name="happy++" color="green"></tw-tag>,<tw-tag name="self--" color="red"></tw-tag>,<tw-tag name="Ryan" color="blue"></tw-tag>,<tw-tag name="happy--" color="red"></tw-tag>,<tw-tag name="choice" color="blue"></tw-tag>,<tw-tag name="self++" color="green"></tw-tag>,<tw-tag name="checkpoint" color="yellow"></tw-tag>,<tw-tag name="conversion" color="blue"></tw-tag><tw-passagedata pid="1" name="Start" tags="choice" position="350,250" size="200,100">(set: $name to (prompt:&quot;What is your name?&quot;, &quot;Shanon&quot;))(if: $name is &quot;Jessica&quot; or it is &quot;Owen&quot; or it is &quot;Ryan&quot;)[(set: $name to (prompt:&quot;Please choose a different name: &quot;, &quot;Cameron&quot;))] 
+<tw-storydata name="Not Weird. Queer" startnode="5" creator="Twine" creator-version="2.3.4" ifid="4D1DEAD6-0EBE-4CB4-975F-58F9E0843DE9" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Choice" color="blue"></tw-tag>,<tw-tag name="happy++" color="green"></tw-tag>,<tw-tag name="self--" color="red"></tw-tag>,<tw-tag name="Ryan" color="blue"></tw-tag>,<tw-tag name="happy--" color="red"></tw-tag>,<tw-tag name="choice" color="blue"></tw-tag>,<tw-tag name="self++" color="green"></tw-tag>,<tw-tag name="checkpoint" color="yellow"></tw-tag>,<tw-tag name="conversion" color="blue"></tw-tag>,<tw-tag name="ending" color="yellow"></tw-tag><tw-passagedata pid="1" name="Start" tags="choice" position="350,250" size="200,100">(set: $name to (prompt:&quot;What is your name?&quot;, &quot;Shanon&quot;))(if: $name is &quot;Jessica&quot; or it is &quot;Owen&quot; or it is &quot;Ryan&quot;)[(set: $name to (prompt:&quot;Please choose a different name: &quot;, &quot;Cameron&quot;))] 
 
 What is your gender? 
 * [[Male]]
@@ -39,7 +39,7 @@ $version </tw-passagedata><tw-passagedata pid="2" name="Male" tags="" position="
 
 
 $version
-(set: $happy to 0, $self to 0)</tw-passagedata><tw-passagedata pid="5" name="Not Weird. Queer" tags="" position="350,100" size="200,100">(set: $version to &quot;^^version [[2019.10.03.21:58 alpha-af-&gt;debug]]^^&quot;, $ryan to false, $talk to false, $friend to false, $death to false, $deaths to 0, $complete to false)
+(set: $happy to 0, $self to 0)</tw-passagedata><tw-passagedata pid="5" name="Not Weird. Queer" tags="" position="350,100" size="200,100">(set: $version to &quot;^^version [[0.0.002 alpha-af-&gt;debug]]^^&quot;, $ryan to false, $talk to false, $friend to false, $death to false, $deaths to 0, $complete to false)
 &#39;&#39;Not Weird. Queer&#39;&#39; 
 ^^(a working title)^^ 
 
@@ -222,10 +222,9 @@ $version</tw-passagedata><tw-passagedata pid="24" name="Restart" tags="" positio
 &#39;&#39;Not Weird. Queer&#39;&#39; 
 ^^(a working title)^^ 
 
-(if: $deaths &gt; 1)[You can do this, $name. I believe in you!]
+(if: $death)[(if: $deaths &gt; 1)[You can do this, $name. I believe in you!]
 
-(text-style: &quot;outline&quot;)[ [[Play!]]] 
-</tw-passagedata><tw-passagedata pid="25" name="Story sharing" tags="choice happy++ self++" position="350,2450" size="200,100">The club president asks if there are any volunteers. 
+(text-style: &quot;outline&quot;)[ [[Play!]]]](else-if: $complete)[Welcome back! &lt;br /&gt;&lt;br /&gt;[[Start]]]</tw-passagedata><tw-passagedata pid="25" name="Story sharing" tags="choice happy++ self++" position="350,2450" size="200,100">The club president asks if there are any volunteers. 
 (if: (not $talk) and $friend)[$name shares $pos poem with just Ryan and $sbj [[nods supportingly-&gt;Go home day 1]].(set: $self to it + 1)](else-if: (not $talk) and (not $friend))[&lt;ul&gt;&lt;li&gt;[[Share you story-&gt;Share poem without Ryan]] &lt;/li&gt;&lt;li&gt;[[Do nothing-&gt;Not share poem without Ryan]] &lt;/li&gt;&lt;/ul&gt;]
 (else:)[$name shares $pos story and the other club members give $obj clicks. Ryan beams and tells $name $sbj [[did a great job-&gt;Go home day 1]].(set: $happy to it + 3, $self to it + 3)]
 
@@ -254,7 +253,30 @@ $version</tw-passagedata><tw-passagedata pid="28" name="Not share poem without R
 
 
 
-$version</tw-passagedata><tw-passagedata pid="29" name="Morning day 2" tags="" position="400,3000" size="100,100">Tomorrow morning rolls around. To be continued… </tw-passagedata></tw-storydata>
+$version</tw-passagedata><tw-passagedata pid="29" name="Morning day 2" tags="" position="400,3000" size="100,100">Tomorrow morning rolls around. 
+You wake up with $self self esteme points and a blank slate of happiness points. 
+
+[[To be continued…-&gt;Thank you for playing (alpha-af)]] 
+
+
+
+
+$version</tw-passagedata><tw-passagedata pid="30" name="Thank you for playing (alpha-af)" tags="ending" position="350,3200" size="200,200">For the special player who played this special game: 
+
+Thank you for getting through this game.  No, seriously.  I know it&#39;s very alpha (version [[alpha-af!-&gt;debug]]), but it means a lot to me that you took the time to click through the options, read through all the dialogue, (if: $death)[persevere and get to a better place, ]and deal with all my nasty bugs and grammar problems, even though it’s still very incomplete. I hope you enjoyed playing it as much as I enjoyed making it.
+
+$name also thanks you eternally for getting $ojb through $pos journey. 
+
+with hope, 
+
+Jeans Jake
+
+(set: $complete to true, $death to false, $deaths to 0)[[Play again-&gt;Restart]] 
+
+
+
+
+$version</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
