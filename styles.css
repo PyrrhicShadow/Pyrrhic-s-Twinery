@@ -57,11 +57,11 @@ a:hover {
     max-width: 800px;
 }
 
-p, {
+p {
     margin-bottom: 10px; 
 } 
 
 ul, ol {
-    margin-left: 20px; 
+    margin-left: 25px; 
     margin-bottom: 10px; 
 }
