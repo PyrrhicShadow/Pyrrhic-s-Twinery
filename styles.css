@@ -51,3 +51,7 @@ a:hover {
     width: 90%; 
     max-width: 800px;
 }
+
+p {
+    margin: 10px; 
+}
