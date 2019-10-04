@@ -27,4 +27,5 @@ a:hover {
 .project {
     margin-bottom: 20px; 
     border-bottom: 1px dashed rgb(0, 174, 255);
+    padding: 20px; 
 }
