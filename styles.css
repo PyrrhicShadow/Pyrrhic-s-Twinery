@@ -37,8 +37,28 @@ a:hover {
     color: #00AEEF;
 }
 
+
+/** Makes sure all ways of doing bold, italics, underline, etc. look the same regardless of browser **/ 
+
+strong, b {
+    font-weight: bold; 
+}
+
+em, i {
+    font-style: italic; 
+}
+
+u {
+    text-decoration: underline; 
+}
+
+small {
+    font-size: 0.7em; 
+}
+
 .project {
     margin-bottom: 20px; 
+    padding-bottom: 20px; 
     border-bottom: 2px dotted rgb(0, 174, 255);
 }
 .project img, #aboutme img {
@@ -53,7 +73,7 @@ a:hover {
     margin-bottom: 10px; 
 } 
 
-.project h3, #aboutme h3 {
+#projects h3, #aboutme h3 {
     font-size: 1.2em; 
     margin-bottom: 10px; 
 }
