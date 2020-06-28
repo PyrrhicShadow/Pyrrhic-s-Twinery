@@ -27,44 +27,48 @@
             <div id="aboutme">
                 <h2>Version history</h2>
                 <p></p>
-                <h3>Alpha-af</h3>
-                <p>Alpha-af versions are work-in-progresses. They do not include the full story and contain dummy dialogue and skeleton pages.  Point systems are subject to change without notice.</p>
-                <p>Report bugs and grammar inconsistancies <a href="https://forms.gle/mc2JKRCaoz9jvtki9" target="_blank" rel="noopener noreferrer">here</a>.</p>
-                <ul>
-                    <li>Version <a href="twine/Not-Weird-Queer-0.0.004.html" target="_blank" rel="noopener noreferrer">0.0.004</a> includes an improved part 1 loop and the start of the part 2 loop.</li>
+                <div class="project">
+                    <h3>Alpha-af</h3>
+                    <p>Alpha-af versions are work-in-progresses. They do not include the full story and contain dummy dialogue and skeleton pages.  Point systems are subject to change without notice.</p>
+                    <p>Report bugs and grammar inconsistancies <a href="https://forms.gle/mc2JKRCaoz9jvtki9" target="_blank" rel="noopener noreferrer">here</a>.</p>
                     <ul>
-                        <li><strong>Known issue</strong>: when choosing a name, the Harlowe engine will occasionally display an error message. If you click "OK" on the message, the game will resume normally.</li>
-                        <li>Now more variety for the ally's name (randomized), player character's deadname (randomized), and player character's default name suggester.</li>
-                        <li>Slight part 1 point-based action balance tweaks and changes to dummy text and skeleton pages. </li>
-                        <li>v. 0.0.003 bug fixes:</li>
+                        <li>Version <a href="twine/Not-Weird-Queer-0.0.004.html" target="_blank" rel="noopener noreferrer">0.0.004</a> includes an improved part 1 loop and the start of the part 2 loop.</li>
                         <ul>
-                            <li>Fixed the bug where every 4th day after day 3 (day 7, day 11, etc.), if you choose to talk to the ally during PE after defending your gender, you will skip lunch that day.</li>
+                            <li><strong>Known issue</strong>: when choosing a name, the Harlowe engine will occasionally display an error message. If you click "OK" on the message, the game will resume normally.</li>
+                            <li>Now more variety for the ally's name (randomized), player character's deadname (randomized), and player character's default name suggester.</li>
+                            <li>Slight part 1 point-based action balance tweaks and changes to dummy text and skeleton pages. </li>
+                            <li>v. 0.0.003 bug fixes:</li>
+                            <ul>
+                                <li>Fixed the bug where every 4th day after day 3 (day 7, day 11, etc.), if you choose to talk to the ally during PE after defending your gender, you will skip lunch that day.</li>
+                            </ul>
+                            <li><strong>Known bug</strong>: if you input a name that is already the ally's name or your deadname, the Harlowe engine will run into an error.</li>
                         </ul>
-                        <li>Known bug: if you input a name that is already the ally's name or your deadname, the Harlowe engine will run into an error.</li>
-                    </ul>
-                    <li>Version <a href="twine/Not Weird. Queer 0-0-003.html" target="_blank" rel="noopener noreferrer">0.0.003</a> includes a fully playable part 1 loop.</li>
-                    <ul>
-                        <li>Completely overhauled the story loop.</li>
-                        <li>Reworked the point-based action balances for hidden variables:</li>
+                        <li>Version <a href="twine/Not Weird. Queer 0-0-003.html" target="_blank" rel="noopener noreferrer">0.0.003</a> includes a fully playable part 1 loop.</li>
+                            <ul>
+                            <li>Completely overhauled the story loop.</li>
+                            <li>Reworked the point-based action balances for hidden variables:</li>
+                            <ul>
+                                <li>Each applicable action only increases or decreases happiness by one point at most.</li>
+                                <li>No actions affect self-esteem points - these are calculated at the end of each day and are cumulative.</li>
+                                <li>Added ally points that affect the progress of part 1 at certain thresholds.</li>
+                            </ul>
+                            <li>Changed the ally's name from Ryan to a dynamic variable based on the gender of the player character.</li>
+                            <li>Smoothed some skeleton text.</li>
+                            <li>Known bug: every 4th day after day 3 (day 7, day 11, etc.), if you choose to talk to the ally during PE after defending your gender, you will skip lunch that day.</li>
+                        </ul>
+                        <li>Version <a href="twine/Not-Weird-Queer-0-0-002.html" target="_blank" rel="noopener noreferrer">0.0.002</a> includes a fully playable day 1.</li>
                         <ul>
-                            <li>Each applicable action only increases or decreases happiness by one point at most.</li>
-                            <li>No actions affect self-esteem points - these are calculated at the end of each day and are cumulative.</li>
-                            <li>Added ally points that affect the progress of part 1 at certain thresholds.</li>
+                            <li>Known bug: If Ryan doesn't save the player during lunch, storming out of the cafeteria leads to a page with a broken <em>else</em> statement.</li>
                         </ul>
-                        <li>Changed the ally's name from Ryan to a dynamic variable based on the gender of the player character.</li>
-                        <li>Smoothed some skeleton text.</li>
-                        <li>Known bug: every 4th day after day 3 (day 7, day 11, etc.), if you choose to talk to the ally during PE after defending your gender, you will skip lunch that day.</li>
                     </ul>
-                    <li>Version <a href="twine/Not-Weird-Queer-0-0-002.html" target="_blank" rel="noopener noreferrer">0.0.002</a> includes a fully playable day 1.</li>
+                </div>
+                <div class="project">
+                    <h3>Alpha</h3> 
+                    <p>Alpha versions are incomplete. They do include the full story line but contain dummy dialogue and descriptions.  Point systems are subject to change without notice</p>
                     <ul>
-                        <li>Known bug: If Ryan doesn't save the player during lunch, storming out of the cafeteria leads to a page with a broken <em>else</em> statement.</li>
+                        <li>Version 0.1.0-alpha has not been completed yet.</li>
                     </ul>
-                </ul>
-                <h3>Alpha</h3> 
-                <p>Alpha versions are incomplete. They do include the full story line but contain dummy dialogue and descriptions.  Point systems are subject to change without notice</p>
-                <ul>
-                    <li>Version 0.1.0-alpha has not been completed yet.</li>
-                </ul>
+                </div>
                 <h3>Beta</h3>
                 <p>Beta versions are complete. They include the full story and dialogue, but may still contain bugs.  Point values are still subject to change without notice.</p>
                 <ul>
