@@ -73,7 +73,7 @@ small {
     margin-bottom: 10px; 
 } 
 
-#projects h3, #aboutme h3 {
+.project h3, #aboutme h3 {
     font-size: 1.2em; 
     margin-bottom: 10px; 
 }
@@ -82,6 +82,7 @@ small {
     margin: 0 auto; 
     width: 90%; 
     max-width: 800px;
+    line-height: 1.5em; 
 }
 
 p {
