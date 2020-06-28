@@ -1,6 +1,6 @@
 # CarboEmerald's Twinery
 
-a collection games made on [Twine](http://twinery.org), a free text-based HTML game maker. 
+a collection games made on [Twine](http://twinery.org), a free text-based HTML game maker, along with a website to display the games (https://carboemerald.github.io/CarboEmerald-s-Twinery/index.html). 
 
 ## Not Weird. Queer 
 
@@ -13,4 +13,8 @@ a game about navigating middle school as a transgender person. loosly autobiogra
 
 a game for the novella of the same name. 
 
-buy the book (https://amazon.com/author/stopazwolf)
+buy the book (https://amazon.com/author/stopazwolf) 
+
+## Perfect 
+
+an interactive "hello world" poem about trappings of beauty and familiarity. 
