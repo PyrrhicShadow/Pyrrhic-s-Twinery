@@ -1,6 +1,6 @@
 # CarboEmerald's Twinery
 
-a collection games made on [Twine](http://twinery.org), a free text-based HTML game maker, along with a website to display the games (https://carboemerald.github.io/CarboEmerald-s-Twinery/index.html). 
+a collection games made on [Twine](http://twinery.org), a free text-based HTML game maker, along with a website to display the games powered by GitHub pages (https://carboemerald.github.io/CarboEmerald-s-Twinery/index.html). 
 
 ## Not Weird. Queer 
 
