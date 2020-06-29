@@ -1,91 +1,117 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="utf-8" />
-            <title>Not Weird. Queer Version History</title>
-            <link rel="stylesheet" href="reset.css" type="text/css"> 
-            <link rel="stylesheet" href="styles.css" type="text/css">
-        </head>
-        <body>
-            <header>
-                <h1>Not Weird. Queer Version History</h1>
-                <nav>
-                    <ul>
-                        <li>&nbsp;</li>
-                        <li><a href="index.html">Home</a></li>
-                        <li>|</li>
-                        <li><a href="aboutme.html">About Me</a></li>
-                        <li>|&nbsp;|</li>
-                        <li><a href="About-Not-Weird-Queer.html">About Not Weird. Queer</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div id="projects">
-                <div class="project">
-                    <h2>Not Weird. Queer Version History</h2>
-                    <p><em>Not Weird. Queer</em> is a loosely autobiographical text-based video game about a trans teen going through middle school.</p> 
-                    <p>Currently, <em>Not Weird. Queer</em> is still in the alpha-af (pre-alpha) stage of developement.</p>
-                </div>
-                <div class="project">
-                    <h2>Alpha-af</h2>
-                    <p>Alpha-af versions are work-in-progresses. They do not include the full story and contain dummy dialogue and skeleton pages.  Point systems are subject to change without notice.</p>
-                    <p>Report bugs and grammar inconsistancies <a href="https://forms.gle/mc2JKRCaoz9jvtki9" target="_blank" rel="noopener noreferrer">here</a>.</p>
-                    <h3>Version 0.0.004</h3>
-                    <p>Version <a href="twine/Not-Weird-Queer-0-0-004.html" target="_blank" rel="noopener noreferrer">0.0.004</a> includes an improved part 1 loop and the start of the part 2 loop.</p>
-                    <ul>
-                        <li><strong>Known issue</strong>: when choosing a name, the Harlowe engine will occasionally display an error message. If you click "OK" on the message, the game will resume normally.</li>
-                        <li>Now more variety for the ally's name (randomized), player character's deadname (randomized), and player character's default name suggester.</li>
-                        <li>Slight part 1 point-based action balance tweaks and changes to dummy text and skeleton pages. </li>
-                        <li>v. 0.0.003 bug fixes:</li>
-                        <ul>
-                            <li>Fixed the bug where every 4th day after day 3 (day 7, day 11, etc.), if you choose to talk to the ally during PE after defending your gender, you will skip lunch that day.</li>
-                        </ul>
-                        <li><strong>Known bug</strong>: if you input a name that is already the ally's name or your deadname, the Harlowe engine will run into an error.</li>
-                    </ul>
-                    <h3>Version 0.0.003</h3>
-                    <p>Version <a href="twine/Not-Weird-Queer-0-0-003.html" target="_blank" rel="noopener noreferrer">0.0.003</a> includes a fully playable part 1 loop.</p>
-                        <ul>
-                        <li>Completely overhauled the story loop.</li>
-                        <li>Reworked the point-based action balances for hidden variables:</li>
-                        <ul>
-                            <li>Each applicable action only increases or decreases happiness by one point at most.</li>
-                            <li>No actions affect self-esteem points - these are calculated at the end of each day and are cumulative.</li>
-                            <li>Added ally points that affect the progress of part 1 at certain thresholds.</li>
-                        </ul>
-                        <li>Changed the ally's name from Ryan to a dynamic variable based on the gender of the player character.</li>
-                        <li>Smoothed some skeleton text.</li>
-                        <li>Known bug: every 4th day after day 3 (day 7, day 11, etc.), if you choose to talk to the ally during PE after defending your gender, you will skip lunch that day.</li>
-                    </ul>
-                    <h3>Version 0.0.002</h3>
-                    <p>Version <a href="twine/Not-Weird-Queer-0-0-002.html" target="_blank" rel="noopener noreferrer">0.0.002</a> includes a fully playable day 1.</p>
-                    <ul>
-                        <li>Known bug: If Ryan doesn't save the player during lunch, storming out of the cafeteria leads to a page with a broken <em>else</em> statement.</li>
-                    </ul>
-                </div>
-
-                <div class="project">
-                    <h2>Alpha</h2> 
-                    <p>Alpha versions are incomplete. They do include the full story line but contain dummy dialogue and descriptions.  Point systems are subject to change without notice</p>
-                    <h3>Version 0.1.0</h3>
-                    <p>Version 0.1.0-alpha has not been completed yet.</p>
-                </div>
-
-                <div class="project">
-                    <h2>Beta</h2>
-                    <p>Beta versions are complete. They include the full story and dialogue, but may still contain bugs.  Point values are still subject to change without notice.</p>
-                    <h3>Version 0.2.0</h3>
-                    <p>Version 0.2.0-beta has not been completed yet.</p>
-                </div>
-
-                <div class="project">
-                <h2>Public release</h2>
-                    <p>Public release versions are complete. They come as-is but may include minor bug fixes from time to time.</p>
-                    <h3>Version 1.0.0</h3>
-                    <p>Version 1.0.0 has not been completed yet.</p>
-                </div>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Not Weird. Queer Version History</title>
+        <link rel="stylesheet" href="reset.css" type="text/css"> 
+        <link rel="stylesheet" href="styles.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>Not Weird. Queer Version History</h1>
+            <nav>
+                <ul>
+                    <li>&nbsp;</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li>|</li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li>|</li>
+                    <li><a href="abouttwine.html">Twine</a></li>
+                    <li>|&nbsp;|</li>
+                    <li><a href="About-Not-Weird-Queer.html">Not Weird. Queer</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="projects">
+            <div class="project">
+                <h2>Not Weird. Queer</h2>
+                <p><em>Not Weird. Queer</em> is a loosely autobiographical text-based video game about a trans teen going through middle school.</p> 
+                <p>Currently, <em>Not Weird. Queer</em> is still in the alpha-af (pre-alpha) stage of developement.</p>
+                <p>Play the latest version: <a href="twine/Not-Weird-Queer-0-0-005.html" target="_blank" rel="noopener noreferrer">0.0.005 alpha-af</a></p>
             </div>
-            <footer>
+            <div class="project">
+                <h2>Alpha-af</h2>
+                <p>Alpha-af versions are work-in-progresses. They do not include the full story and contain dummy dialogue and skeleton pages.  Point systems are subject to change without notice.</p>
+                <p>Report bugs and grammar inconsistancies <a href="https://forms.gle/mc2JKRCaoz9jvtki9" target="_blank" rel="noopener noreferrer">here</a>.</p>
+
+                <h3>Version 0.0.005</h3>
+                <p>Version <a href="twine/Not-Weird-Queer-0-0-005.html" target="_blank" rel="noopener noreferrer">0.0.005</a> includes a mostly fleshed-out, playable part 2 loop and further improvements to the part 1 loop.</p>
+                <ul>
+                    <li><strong>Known issue</strong>: when choosing a name, the Harlowe engine will occasionally display an error message. If you click "OK" on the message, the game will resume normally.</li>
+                    <li>Comprehensive spelling, grammar, and white-space corrections.</li>
+                    <ul>
+                        <li>If you find anymore spelling or grammar issues, please submit a <a href="https://forms.gle/mc2JKRCaoz9jvtki9" target="_blank" rel="noopener noreferrer">bug report</a>.</li>
+                    </ul>
+                    <li>Expansion to the playable part 2 loop (still incomplete).</li> 
+                    <li>v. 0.0.004 bug fixes:</li>
+                    <ul>
+                        <li>Fix the bug where if you come out to the ally on the 4th day after day 1 (day 5, day 9, etc), the game will run into an error and send you home instead of taking you to the book club.</li>
+                        <li>Fixed numerous instances where the name "Ryan" was hard-coded into the text instead of dynamically showing the name of ally for the current play-through.</li>
+                    </ul>
+                    <li><strong>Known bug</strong>: if you input a name that is already the ally's name or your deadname, the Harlowe engine will run into an error.</li>
+                </ul>
+                <div class="spacer">&nbsp;</div>
+
+                <h3>Version 0.0.004</h3>
+                <p>Version <a href="twine/Not-Weird-Queer-0-0-004.html" target="_blank" rel="noopener noreferrer">0.0.004</a> includes an improved part 1 loop and the start of the part 2 loop.</p>
+                <ul>
+                    <li><strong>Known issue</strong>: when choosing a name, the Harlowe engine will occasionally display an error message. If you click "OK" on the message, the game will resume normally.</li>
+                    <li>Now more variety for the ally's name (randomized), player character's deadname (randomized), and player character's default name suggester.</li>
+                    <li>Slight part 1 point-based action balance tweaks and changes to dummy text and skeleton pages. </li>
+                    <li>v. 0.0.003 bug fixes:</li>
+                    <ul>
+                        <li>Fixed the bug where every 4th day after day 3 (day 7, day 11, etc.), if you choose to talk to the ally during PE after defending your gender, you will skip lunch that day.</li>
+                    </ul>
+                    <li><strong>Known bug</strong>: if you input a name that is already the ally's name or your deadname, the Harlowe engine will run into an error.</li>
+                </ul>
+                <div class="spacer">&nbsp;</div>
+
+                <h3>Version 0.0.003</h3>
+                <p>Version <a href="twine/Not-Weird-Queer-0-0-003.html" target="_blank" rel="noopener noreferrer">0.0.003</a> includes a fully playable part 1 loop.</p>
+                    <ul>
+                    <li>Completely overhauled the story loop.</li>
+                    <li>Reworked the point-based action balances for hidden variables:</li>
+                    <ul>
+                        <li>Each applicable action only increases or decreases happiness by one point at most.</li>
+                        <li>No actions affect self-esteem points - these are calculated at the end of each day and are cumulative.</li>
+                        <li>Added ally points that affect the progress of part 1 at certain thresholds.</li>
+                    </ul>
+                    <li>Changed the ally's name from Ryan to a dynamic variable based on the gender of the player character.</li>
+                    <li>Smoothed some skeleton text.</li>
+                    <li>Known bug: every 4th day after day 3 (day 7, day 11, etc.), if you choose to talk to the ally during PE after defending your gender, you will skip lunch that day.</li>
+                </ul>
+                <div class="spacer">&nbsp;</div>
+
+                <h3>Version 0.0.002</h3>
+                <p>Version <a href="twine/Not-Weird-Queer-0-0-002.html" target="_blank" rel="noopener noreferrer">0.0.002</a> includes a fully playable day 1.</p>
+                <ul>
+                    <li>Known bug: If Ryan doesn't save the player during lunch, storming out of the cafeteria leads to a page with a broken <em>else</em> statement.</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h2>Alpha</h2> 
+                <p>Alpha versions are incomplete. They do include the full story line but contain dummy dialogue and descriptions.  Point systems are subject to change without notice</p>
+                <h3>Version 0.1.0</h3>
+                <p>Version 0.1.0-alpha has not been completed yet.</p>
+            </div>
+
+            <div class="project">
+                <h2>Beta</h2>
+                <p>Beta versions are complete. They include the full story and dialogue, but may still contain bugs.  Point values are still subject to change without notice.</p>
+                <h3>Version 0.2.0</h3>
+                <p>Version 0.2.0-beta has not been completed yet.</p>
+            </div>
+
+            <div class="project">
+                <h2>Public release</h2>
+                <p>Public release versions are complete. They come as-is but may include minor bug fixes from time to time.</p>
+                <h3>Version 1.0.0</h3>
+                <p>Version 1.0.0 has not been completed yet.</p>
+            </div>
+        </div>
+        <footer>
             <p>Last updated 28 June 2020.</p>
         </footer>
-        </body>
-    </html>
+    </body>
+</html>

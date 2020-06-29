@@ -1,12 +1,19 @@
+/** div class clear for sections with images **/
 .clear {
     clear: both; 
 }
 
+/** div class spacer to separate sections ending in ul, ol **/
+#projects .spacer {
+    line-height: 0.7em; 
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Segoe UI, Tahoma, Verdana, sans-serif;
     margin: 20px; 
     background-color: #F1F9FF;
 }
+
 header {
     margin-bottom: 20px; 
     padding: 20px; 
@@ -20,6 +27,12 @@ header h1 {
 header nav ul li {
     display: inline; 
     padding: 5px; 
+
+}
+
+header nav ul {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
 }
 
 footer {
@@ -29,6 +42,7 @@ footer {
     border-top: 2px dotted rgb(0, 174, 255)
 }
 
+/** Links **/
 a {
     color: rgb(255, 81, 0)
 }
@@ -39,7 +53,6 @@ a:hover {
 
 
 /** Makes sure all ways of doing bold, italics, underline, etc. look the same regardless of browser **/ 
-
 strong, b {
     font-weight: bold; 
 }
@@ -56,6 +69,7 @@ small {
     font-size: 0.7em; 
 }
 
+/** consistant body text formatting **/
 .project {
     margin-bottom: 20px; 
     padding-bottom: 20px; 
@@ -91,5 +105,4 @@ p {
 
 ul, ol {
     margin-left: 25px; 
-    margin-bottom: 10px; 
 }

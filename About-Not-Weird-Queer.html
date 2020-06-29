@@ -1,52 +1,58 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="utf-8" />
-            <title>About Not Weird. Queer</title>
-            <link rel="stylesheet" href="reset.css" type="text/css"> 
-            <link rel="stylesheet" href="styles.css" type="text/css">
-        </head>
-        <body>
-            <header>
-                <h1>About Not Weird. Queer</h1>
-                <nav>
-                    <ul>
-                        <li>&nbsp;</li>
-                        <li><a href="index.html">Home</a></li>
-                        <li>|</li>
-                        <li><a href="aboutme.html">About Me</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div id="projects">
-                <div class="project">
-                    <h2>Not Weird. Queer</h2>
-                    <p><em>Not Weird. Queer</em> is a loosely autobiographical text-based video game about a trans teen going through middle school.</p> 
-                    <p>Currently, <em>Not Weird. Queer</em> is still in the alpha-af (pre-alpha) stage of developement.</p>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>About Not Weird. Queer</title>
+        <link rel="stylesheet" href="reset.css" type="text/css"> 
+        <link rel="stylesheet" href="styles.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>About Not Weird. Queer</h1>
+            <nav>
+                <ul>
+                    <li>&nbsp;</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li>|</li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li>|</li>
+                    <li><a href="abouttwine.html">Twine</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="projects">
+            <div class="project">
+                <h2>Not Weird. Queer</h2>
+                <p><em>Not Weird. Queer</em> is a loosely autobiographical text-based video game about a trans teen going through middle school.</p> 
+                <p>Currently, <em>Not Weird. Queer</em> is still in the alpha-af (pre-alpha) stage of developement.</p>
 
-                    <h3>Play Not Weird. Queer</h3>
-                    <p>Play the latest version: <a href="twine/Not-Weird-Queer-0-0-004.html" target="_blank" rel="noopener noreferrer">0.0.004 alpha-af</a></p>
-                    <p>Report bugs and grammar inconsistancies <a href="https://forms.gle/mc2JKRCaoz9jvtki9" target="_blank" rel="noopener noreferrer">here</a>.</p>
-                </div>
-                <div class="project">
-                    <h2>Version history</h2>
-                    <p>See the full version history <a href="Not-Weird-Queer-Versions.html">here</a>.</p>
-                    <h3>Version 0.0.004</h3>
-                        <p>Version <a href="twine/Not-Weird-Queer-0-0-004.html" target="_blank" rel="noopener noreferrer">0.0.004</a> includes an improved part 1 loop and the start of the part 2 loop.</p>
-                        <ul>
-                            <li><strong>Known issue</strong>: when choosing a name, the Harlowe engine will occasionally display an error message. If you click "OK" on the message, the game will resume normally.</li>
-                            <li>Now more variety for the ally's name (randomized), player character's deadname (randomized), and player character's default name suggester.</li>
-                            <li>Slight part 1 point-based action balance tweaks and changes to dummy text and skeleton pages. </li>
-                            <li>v. 0.0.003 bug fixes:</li>
-                            <ul>
-                                <li>Fixed the bug where every 4th day after day 3 (day 7, day 11, etc.), if you choose to talk to the ally during PE after defending your gender, you will skip lunch that day.</li>
-                            </ul>
-                            <li><strong>Known bug</strong>: if you input a name that is already the ally's name or your deadname, the Harlowe engine will run into an error.</li>
-                        </ul>
-                    </div>
+                <h3>Play Not Weird. Queer</h3>
+                <p>Play the latest version: <a href="twine/Not-Weird-Queer-0-0-005.html" target="_blank" rel="noopener noreferrer">0.0.005 alpha-af</a></p>
+                <p>Report bugs and grammar inconsistancies <a href="https://forms.gle/mc2JKRCaoz9jvtki9" target="_blank" rel="noopener noreferrer">here</a>.</p>
             </div>
-            <footer>
+            <div class="project">
+                <h2>Version history</h2>
+                <p>See the full version history <a href="Not-Weird-Queer-Versions.html">here</a>.</p>
+                <h3>Version 0.0.005</h3>
+                <p>Version <a href="twine/Not-Weird-Queer-0-0-005.html" target="_blank" rel="noopener noreferrer">0.0.005</a> includes a mostly fleshed-out, playable part 2 loop and further improvements to the part 1 loop.</p>
+                <ul>
+                    <li><strong>Known issue</strong>: when choosing a name, the Harlowe engine will occasionally display an error message. If you click "OK" on the message, the game will resume normally.</li>
+                    <li>Comprehensive spelling, grammar, and white-space corrections.</li>
+                    <ul>
+                        <li>If you find anymore spelling or grammar issues, please submit a <a href="https://forms.gle/mc2JKRCaoz9jvtki9" target="_blank" rel="noopener noreferrer">bug report</a>.</li>
+                    </ul>
+                    <li>Expansion to the playable part 2 loop (still incomplete).</li> 
+                    <li>v. 0.0.004 bug fixes:</li>
+                    <ul>
+                        <li>Fix the bug where if you come out to the ally on the 4th day after day 1 (day 5, day 9, etc), the game will run into an error and send you home instead of taking you to the book club.</li>
+                        <li>Fixed numerous instances where the name "Ryan" was hard-coded into the text instead of dynamically showing the name of ally for the current play-through.</li>
+                    </ul>
+                    <li><strong>Known bug</strong>: if you input a name that is already the ally's name or your deadname, the Harlowe engine will run into an error.</li>
+                </ul>
+             </div>
+        </div>
+        <footer>
             <p>Last updated 28 June 2020.</p>
         </footer>
-        </body>
-    </html>
+    </body>
+</html>
