@@ -27,12 +27,28 @@
                 <h2>Not Weird. Queer</h2>
                 <p><em>Not Weird. Queer</em> is a loosely autobiographical text-based video game about a trans teen going through middle school.</p> 
                 <p>Currently, <em>Not Weird. Queer</em> is still in the alpha-af (pre-alpha) stage of developement.</p>
-                <p>Play the latest version: <a href="twine/Not-Weird-Queer-0-0-005.html" target="_blank" rel="noopener noreferrer">0.0.005 alpha-af</a></p>
+                <p>Play the latest version: <a href="twine/Not-Weird-Queer-0-0-006.html" target="_blank" rel="noopener noreferrer">0.0.006 alpha-af</a></p>
             </div>
             <div class="project">
                 <h2>Alpha-af</h2>
                 <p>Alpha-af versions are work-in-progresses. They do not include the full story and contain dummy dialogue and skeleton pages.  Point systems are subject to change without notice.</p>
                 <p>Report bugs and grammar inconsistancies <a href="https://forms.gle/mc2JKRCaoz9jvtki9" target="_blank" rel="noopener noreferrer">here</a>.</p>
+
+                <h3>Version 0.0.006</h3>
+                <p>Version <a href="twine/Not-Weird-Queer-0-0-006.html" target="_blank" rel="noopener noreferrer">0.0.006</a> is a bug fix for the v. 0.0.005 female-route name prompt issue.</p>
+                <ul>
+                    <li><strong>Known issue</strong>: when choosing a name, the Harlowe engine will occasionally display an error message. If you click "OK" on the message, the game will resume normally.</li>
+                    <li>Loop logic now depends on $loop, a variable tracking the absolute day as written in the code. Each unique day has a unique $loop number, and $loop numbers repeat when days repeat.</li>
+                    <ul>
+                        <li>If you find any errors in the loop logic, such as skipping days, sequentially repeated days, or events appearing on the wrong days, please submit a <a href="https://forms.gle/mc2JKRCaoz9jvtki9" target="_blank" rel="noopener noreferrer">bug report</a>.</li>
+                    </ul>
+                    <li>v. 0.0.005  bug fixes:</li>
+                    <ul>
+                        <li>Fixed the bug where the female path is unplayable because the prompt for choosing a name in that path is broken.</li>
+                    </ul>
+                    <li><strong>Known bug</strong>: if you input a name that is already the ally's name or your deadname, the Harlowe engine will run into an error.</li>
+                </ul>
+                <div class="spacer">&nbsp;</div>
 
                 <h3>Version 0.0.005</h3>
                 <p>Version <a href="twine/Not-Weird-Queer-0-0-005.html" target="_blank" rel="noopener noreferrer">0.0.005</a> includes a mostly fleshed-out, playable part 2 loop and further improvements to the part 1 loop.</p>
@@ -49,6 +65,7 @@
                         <li>Fixed numerous instances where the name "Ryan" was hard-coded into the text instead of dynamically showing the name of ally for the current play-through.</li>
                     </ul>
                     <li><strong>Known bug</strong>: if you input a name that is already the ally's name or your deadname, the Harlowe engine will run into an error.</li>
+                    <li><strong>Known bug</strong>: the female path is unplayable because the prompt for choosing a name in that path is broken.</li>
                 </ul>
                 <div class="spacer">&nbsp;</div>
 
@@ -78,14 +95,15 @@
                     </ul>
                     <li>Changed the ally's name from Ryan to a dynamic variable based on the gender of the player character.</li>
                     <li>Smoothed some skeleton text.</li>
-                    <li>Known bug: every 4th day after day 3 (day 7, day 11, etc.), if you choose to talk to the ally during PE after defending your gender, you will skip lunch that day.</li>
+                    <li><strong>Known bug</strong>: every 4th day after day 3 (day 7, day 11, etc.), if you choose to talk to the ally during PE after defending your gender, you will skip lunch that day.</li>
                 </ul>
                 <div class="spacer">&nbsp;</div>
 
                 <h3>Version 0.0.002</h3>
                 <p>Version <a href="twine/Not-Weird-Queer-0-0-002.html" target="_blank" rel="noopener noreferrer">0.0.002</a> includes a fully playable day 1.</p>
                 <ul>
-                    <li>Known bug: If Ryan doesn't save the player during lunch, storming out of the cafeteria leads to a page with a broken <em>else</em> statement.</li>
+                    <li><strong>Known bug</strong>: Players can give the player character the same name as their intended deadname or the ally's name.</li>
+                    <li><strong>Known bug</strong>: If Ryan doesn't save the player during lunch, storming out of the cafeteria leads to a page with a broken <em>else</em> statement.</li>
                 </ul>
             </div>
 
