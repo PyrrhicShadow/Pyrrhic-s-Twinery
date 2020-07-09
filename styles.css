@@ -27,7 +27,6 @@ header h1 {
 header nav ul li {
     display: inline; 
     padding: 5px; 
-
 }
 
 header nav ul {
@@ -40,6 +39,16 @@ footer {
     margin-bottom: 40px; 
     padding: 20px; 
     border-top: 2px dotted rgb(0, 174, 255)
+}
+
+footer nav ul li {
+    display: inline; 
+    padding: 5px; 
+}
+
+footer nav ul {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
 }
 
 /** Links **/
