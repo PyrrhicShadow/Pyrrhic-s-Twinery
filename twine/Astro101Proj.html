@@ -104,63 +104,76 @@ a game by Jake Kao
 
 [[Begin]]
 
-&lt;&lt;set $solved to 0&gt;&gt; \
-&lt;&lt;set $required to 4&gt;&gt;\
+&lt;&lt;set $solved to 0, $required to 8&gt;&gt;\
 &lt;&lt;set $answer to false&gt;&gt;\
-&lt;&lt;set $appmotion to false&gt;&gt;\
-&lt;&lt;set $moonphase to false&gt;&gt;\
-&lt;&lt;set $kepler to false&gt;&gt;\
-&lt;&lt;set $newton to false&gt;&gt;\</tw-passagedata><tw-passagedata pid="2" name="Begin" tags="" position="600,500" size="100,100">Welcome, space adventurer! You are trapped on a planet distant from your home, and you must solve a series of puzzles to free your spacecraft from the clutches of this strange planet and return home. 
+&lt;&lt;set $appmotion to false, $moonphase to false, $kepler to false, $newton to false, $spectra to false, $doppler to false, $clusters to false, $galaxies to false&gt;&gt;\</tw-passagedata><tw-passagedata pid="2" name="Begin" tags="" position="600,500" size="100,100">Welcome, space adventurer! You are trapped on a planet distant from your home, and you must solve a series of puzzles to free your spacecraft from the clutches of this strange planet and return home. 
 
 Are you ready? 
 
 [[Yes]]
-&lt;&lt;switch visited()&gt;&gt; \
-&lt;&lt;case 1&gt;&gt; \
+&lt;&lt;switch visited()&gt;&gt;\
+&lt;&lt;case 1&gt;&gt;\
 	[[No]]
-&lt;&lt;case 2 3&gt;&gt; \
+&lt;&lt;case 2 3&gt;&gt;\
 	[[No]] (are you sure?)
-&lt;&lt;case 4 5&gt;&gt; \
+&lt;&lt;case 4 5&gt;&gt;\
 	[[No]] (your spacecraft is stuck! how else will you leave?)
-&lt;&lt;default&gt;&gt; \
+&lt;&lt;default&gt;&gt;\
 	
-&lt;&lt;/switch&gt;&gt; \</tw-passagedata><tw-passagedata pid="3" name="Yes" tags="" position="600,650" size="100,100">Very good, space adventurer! 
+&lt;&lt;/switch&gt;&gt;\</tw-passagedata><tw-passagedata pid="3" name="Yes" tags="" position="600,650" size="100,100">Very good, space adventurer! 
 
 In your time here, you have observed that this planet seems to have many of the same astronomical features as your home planet. This might be an important clue to getting off this strange planet and back home. 
 
-With that out of the way, let&#39;s head to your ship! 
+With that information out of the way, let&#39;s head to your ship! 
 
 [[Spaceship]]</tw-passagedata><tw-passagedata pid="4" name="No" tags="" position="450,650" size="100,100">I don&#39;t know what games you&#39;re trying to play, space adventurer, but this strange planet does not appreciate. 
 
-&lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Spaceship" tags="" position="600,800" size="100,100">Welcome to your spaceship! &lt;&lt;if not visited() gt 1&gt;&gt;This is where you will find which puzzles you have yet to complete. You will return to your spaceship after successfully completing a puzzle&lt;&lt;/if&gt;&gt;
+&lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Spaceship" tags="" position="600,800" size="100,100">&lt;&lt;set $answer to false&gt;&gt;\
+Welcome to your spaceship! &lt;&lt;if not visited() gt 1&gt;&gt;This is where you will find which puzzles you have yet to complete. You will return to your spaceship after successfully completing a puzzle&lt;&lt;/if&gt;&gt;
 
 What would you like to do next? 
-&lt;!-- All puzzles go here --&gt; 
-&lt;&lt;if not $appmotion&gt;&gt;[[Puzzle 1|Apparent Motion]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if not $moonphases&gt;&gt; [[Puzzle 2|Moon Phases]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if not $kepler&gt;&gt;[[Puzzle 3|Kepler&#39;s Laws]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if not $newton&gt;&gt;[[Puzzle 4|Newtonian Gravity]]&lt;&lt;/if&gt;&gt;
-&lt;&lt;if hasVisited(&quot;Start spaceship engines&quot;)&gt;&gt; \
-[[Solve the final puzzle|Galaxy classification and star formation]]
-&lt;&lt;elseif $solved gte $required&gt;&gt; \
+
+&lt;&lt;if not $appmotion&gt;&gt;[[Apparent Motion]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if not $moonphases&gt;&gt; [[Moon Phases]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if not $kepler&gt;&gt;[[Planetary Motion|Kepler&#39;s Laws]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if not $newton&gt;&gt;[[Newtonian Gravity]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if not $spectra&gt;&gt;[[Spectroscopy]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if not $doppler&gt;&gt;[[Doppler Shift]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if not $clusters&gt;&gt;[[Star Clusters]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if not $galaxies&gt;&gt;[[Galaxy Classification]]&lt;&lt;/if&gt;&gt;
+\
+&lt;&lt;if hasVisited(&quot;Start spaceship engines&quot;)&gt;&gt;\
+[[Solve the final puzzle|Dark Matter]]
+&lt;&lt;elseif $solved gte $required&gt;&gt;\
 You have solved all of this strange planet&#39;s puzzles and it has released your ship from its hold. 
 
 [[Start spaceship engines]]&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="6" name="Start spaceship engines" tags="" position="450,800" size="100,100">Oh no! Something has gone wrong with the ignition sequence and it seems there is one final puzzle this strange planet wants you to complete before it will let you go. 
 
 Are you ready for the final challenge? 
 
-[[Yes|Galaxy classification and star formation]]
-&lt;&lt;switch visited()&gt;&gt; \
-&lt;&lt;case 1&gt;&gt; \
+[[Yes|Dark Matter]]
+&lt;&lt;switch visited()&gt;&gt;\
+&lt;&lt;case 1&gt;&gt;\
 	[[No]]
-&lt;&lt;case 2 3&gt;&gt; \
+&lt;&lt;case 2 3&gt;&gt;\
 	[[No]] (are you sure?)
-&lt;&lt;case 4 5&gt;&gt; \
+&lt;&lt;case 4 5&gt;&gt;\
 	[[No]] (your spacecraft is stuck! how else will you leave?)
-&lt;&lt;default&gt;&gt; \
+&lt;&lt;default&gt;&gt;\
 	
-&lt;&lt;/switch&gt;&gt; \</tw-passagedata><tw-passagedata pid="7" name="Galaxy classification and star formation" tags="" position="450,950" size="100,100">
-Once you&#39;re ready, [[check your answer|Galaxy classification and star formation Answer]]</tw-passagedata><tw-passagedata pid="8" name="Apparent Motion" tags="" position="600,950" size="100,100">Haha, welcome to a puzzle on apparent stellar motion from the persepctive an inhabitant of this strange planet&#39;s northern hemisphere. 
+&lt;&lt;/switch&gt;&gt;\</tw-passagedata><tw-passagedata pid="7" name="Dark Matter" tags="" position="450,950" size="100,100">Haha, welcome to the final puzzle, a puzzle about dark matter. 
+
+What is dark matter made of?
+&lt;&lt;cycle &quot;$answer&quot;&gt;&gt;
+    &lt;&lt;option &quot;Microscopic black holes&quot; false&gt;&gt;
+	&lt;&lt;option &quot;Dark matter doesn&#39;t exist, general relitivity is just wrong&quot; false&gt;&gt;
+	&lt;&lt;option &quot;Engergy fluctuations in the quantumn vacuum&quot; false&gt;&gt;
+	&lt;&lt;option &quot;Axions, a particle in a quantumn field&quot; false&gt;&gt;
+	&lt;&lt;option &quot;There is no current consensus for what dark matter is made of&quot; true&gt;&gt;
+&lt;&lt;/cycle&gt;&gt;
+
+
+Once you&#39;re ready, [[check your answer|Dark Matter Answer]]</tw-passagedata><tw-passagedata pid="8" name="Apparent Motion" tags="" position="800,350" size="100,100">Haha, welcome to a puzzle on apparent stellar motion from the persepctive an inhabitant of this strange planet&#39;s northern hemisphere. 
 
 Assuming this planet&#39;s rotation is similar to your home planet, what direction would the stars in the night sky be moving?
 &lt;&lt;cycle &quot;$answer&quot;&gt;&gt;
@@ -170,8 +183,9 @@ Assuming this planet&#39;s rotation is similar to your home planet, what directi
 	&lt;&lt;option &quot;Clockwise&quot; false&gt;&gt;
 	&lt;&lt;option &quot;Counterclockwise&quot; true&gt;&gt;
 &lt;&lt;/cycle&gt;&gt;
+&lt;&lt;if visited(&quot;Spaceship&quot;) lte 1&gt;&gt;Hint: click on the link above until the correct answer shows up! &lt;&lt;/if&gt;&gt;
 
-Once you&#39;re ready, [[check your answer|Apparent Motion Answer]]</tw-passagedata><tw-passagedata pid="9" name="Apparent Motion Answer" tags="" position="750,950" size="100,100">&lt;&lt;if $answer&gt;&gt; \ 
+Once you&#39;re ready, [[check your answer|Apparent Motion Answer]]</tw-passagedata><tw-passagedata pid="9" name="Apparent Motion Answer" tags="" position="950,350" size="100,100">&lt;&lt;if $answer&gt;&gt;\ 
 Congradulations, you solved the puzzle! 
 
 Stars do move counterclockwise in the sky both on your home planet and this strange planet! 
@@ -179,15 +193,14 @@ Stars do move counterclockwise in the sky both on your home planet and this stra
 Now it&#39;s time to return to your ship. 
 
 [[Spaceship]] &lt;&lt;set $solved++&gt;&gt;&lt;&lt;set $appmotion to true&gt;&gt;
-&lt;&lt;else&gt;&gt; \
+&lt;&lt;else&gt;&gt;\
 Oops, that is not the correct answer. Would you like to try again? 
 
 &lt;&lt;return &quot;Yes&quot;&gt;&gt; 
 [[No|Spaceship]] 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Moon Phases" tags="" position="600,1100" size="100,100">Haha, welcome to a puzzle on moon phases from the persepctive an inhabitant of this planet. 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Moon Phases" tags="" position="800,500" size="100,100">Haha, welcome to a puzzle on moon phases from the persepctive an inhabitant of this planet. 
 
 If this planet&#39;s sole moon is very similar in orbital path in relation to this strange planet as is your home planet&#39;s moon is to your home planet, what&#39;s the current phase of the moon if the moon is almost fully illuminated, with a thin sliver in shadow on the right from your perspective on the northern hemisphere of this strange planet? 
-
 &lt;&lt;cycle &quot;$answer&quot;&gt;&gt;
     &lt;&lt;option &quot;Full Moon&quot; false&gt;&gt;
 	&lt;&lt;option &quot;First Quarter&quot; false&gt;&gt;
@@ -195,20 +208,22 @@ If this planet&#39;s sole moon is very similar in orbital path in relation to th
 	&lt;&lt;option &quot;Waxing Gibous&quot; false&gt;&gt;
 	&lt;&lt;option &quot;New Moon&quot; false&gt;&gt;
 &lt;&lt;/cycle&gt;&gt;
+&lt;&lt;if visited(&quot;Spaceship&quot;) lte 1&gt;&gt;Hint: click on the link above until the correct answer shows up! &lt;&lt;/if&gt;&gt;
 
-Once you&#39;re ready, [[check your answer|Moon Phases Answer]]</tw-passagedata><tw-passagedata pid="11" name="Moon Phases Answer" tags="" position="750,1100" size="100,100">&lt;&lt;if $answer&gt;&gt; \ 
-Congradulations, you solved the puzzle! Now it&#39;s time to return to your ship. 
+Once you&#39;re ready, [[check your answer|Moon Phases Answer]]</tw-passagedata><tw-passagedata pid="11" name="Moon Phases Answer" tags="" position="950,500" size="100,100">&lt;&lt;if $answer&gt;&gt;\ 
+Congradulations, you solved the puzzle! 
+
+Now it&#39;s time to return to your ship. 
 
 [[Spaceship]] &lt;&lt;set $solved++&gt;&gt;&lt;&lt;set $moonphases to true&gt;&gt;
-&lt;&lt;else&gt;&gt; \
+&lt;&lt;else&gt;&gt;\
 Oops, that is not the correct answer. Would you like to try again? 
 
 &lt;&lt;return &quot;Yes&quot;&gt;&gt; 
 [[No|Spaceship]] 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Kepler&#39;s Laws" tags="" position="600,1250" size="100,100">Haha, welcome to a puzzle on the motion of planetary bodies. 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Kepler&#39;s Laws" tags="" position="800,650" size="100,100">Haha, welcome to a puzzle on the motion of planetary bodies. 
 
 This strange planet has a slightly elliptical orbit around its star. At which point along its orbit is this strange planet traveling the fastest?
-
 &lt;&lt;cycle &quot;$answer&quot;&gt;&gt;
     &lt;&lt;option &quot;The speed of the orbit never changes&quot; false&gt;&gt;
 	&lt;&lt;option &quot;When the planet is closest to its star&quot; true&gt;&gt;
@@ -216,26 +231,35 @@ This strange planet has a slightly elliptical orbit around its star. At which po
 	&lt;&lt;option &quot;When the planet is traveling from closer to further to its star&quot; false&gt;&gt;
 	&lt;&lt;option &quot;When the planet is traveling from further to closer to its star&quot; false&gt;&gt;
 &lt;&lt;/cycle&gt;&gt;
+&lt;&lt;if visited(&quot;Spaceship&quot;) lte 1&gt;&gt;Hint: click on the link above until the correct answer shows up! &lt;&lt;/if&gt;&gt;
 
-Once you&#39;re ready, [[check your answer|Kepler&#39;s Laws Answer]]</tw-passagedata><tw-passagedata pid="13" name="Kepler&#39;s Laws Answer" tags="" position="750,1250" size="100,100">&lt;&lt;if $answer&gt;&gt; \ 
-Congradulations, you solved the puzzle! Now it&#39;s time to return to your ship. 
+Once you&#39;re ready, [[check your answer|Kepler&#39;s Laws Answer]]</tw-passagedata><tw-passagedata pid="13" name="Kepler&#39;s Laws Answer" tags="" position="950,650" size="100,100">&lt;&lt;if $answer&gt;&gt;\ 
+Congradulations, you solved the puzzle! 
+
+The force of gravity depends on distance, so when the satelite is closest to the body it&#39;s orbiting, that&#39;s when it experiences the most amount of acceleration from gravity. 
+
+Now it&#39;s time to return to your ship. 
 
 [[Spaceship]] &lt;&lt;set $solved++&gt;&gt;&lt;&lt;set $kepler to true&gt;&gt;
-&lt;&lt;else&gt;&gt; \
+&lt;&lt;else&gt;&gt;\
 Oops, that is not the correct answer. Would you like to try again? 
 
 &lt;&lt;return &quot;Yes&quot;&gt;&gt; 
 [[No|Spaceship]] 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Galaxy classification and star formation Answer" tags="" position="450,1100" size="100,100">&lt;&lt;if $answer&gt;&gt; \ 
-Congradulations, you solved the puzzle! Now it&#39;s time to get off this strange planet! 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Dark Matter Answer" tags="" position="450,1100" size="100,100">&lt;&lt;if $answer&gt;&gt;\ 
+Congradulations, you solved the puzzle! 
+
+Maybe one day, science will solve the puzzle of dark matter! (Or maybe it already has, making this planet&#39;s ignorance a relic of its time.)
+
+Now, it&#39;s time to get off this strange planet! 
 
 [[Start spaceship engines again]]
-&lt;&lt;else&gt;&gt; \
+&lt;&lt;else&gt;&gt;\
 Oops, that is not the correct answer. Would you like to try again? 
 
 &lt;&lt;return &quot;Yes&quot;&gt;&gt; 
 [[No|Spaceship]] 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Start spaceship engines again" tags="" position="450,1225" size="100,100">You retry your spaceship&#39;s ignition sequence now that you&#39;ve solved this strange planet&#39;s final puzzle. 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Start spaceship engines again" tags="" position="450,1250" size="100,100">You retry your spaceship&#39;s ignition sequence now that you&#39;ve solved this strange planet&#39;s final puzzle. 
 
 Huzzah! It works! 
 
@@ -243,16 +267,13 @@ You blast off into space, setting a course for your home planet.
 
 As you fly away, you look through your window at that strange planet, wonder what mysterious force could keep you bound to that strange planet&#39;s surface and how these puzzles had any effect on it all. 
 
-The End! 
-
-[[Credits]]</tw-passagedata><tw-passagedata pid="16" name="Credits" tags="" position="450,1350" size="100,100">This game was coded and written by Jake Kao based on the material covered in their fall 2023 semester of Astro 101 - Modern Astronomy taught by the awesome Danny Barringer at SJSU. 
+[[The End!|Credits]]</tw-passagedata><tw-passagedata pid="16" name="Credits" tags="" position="450,1400" size="100,100">This game was coded and written by Jake Kao based on the material covered in their fall 2023 semester of Astro 101 - Modern Astronomy taught by the awesome Danny Barringer at SJSU. 
 
 Thank you for playing!
 
-[[Play again|Start]]</tw-passagedata><tw-passagedata pid="17" name="Newtonian Gravity" tags="" position="600,1400" size="100,100">Haha, welcome to a puzzle about Newtonian gravity. Don&#39;t question why this strange planet is namedropping Newton, or why you, space adventurer, knows who Newton is. 
+[[Play again|Start]]</tw-passagedata><tw-passagedata pid="17" name="Newtonian Gravity" tags="" position="800,800" size="100,100">Haha, welcome to a puzzle about Newtonian gravity. Don&#39;t question why this strange planet is namedropping Newton, or why you, space adventurer, knows who Newton is. 
 
 In order to figure out the orbital speed of a small satelite orbiting a large body, what information do you &#39;&#39;not&#39;&#39; need?
-
 &lt;&lt;cycle &quot;$answer&quot;&gt;&gt;
     &lt;&lt;option &quot;The ability to do algebra&quot; false&gt;&gt;
     &lt;&lt;option &quot;The distance between the centers of the small satelite and the large bodyr&quot; false&gt;&gt;
@@ -260,8 +281,9 @@ In order to figure out the orbital speed of a small satelite orbiting a large bo
 	&lt;&lt;option &quot;The gravitational constant (in appropriate units)&quot; false&gt;&gt;
 	&lt;&lt;option &quot;The mass of the large body&quot; false&gt;&gt;
 &lt;&lt;/cycle&gt;&gt;
+&lt;&lt;if visited(&quot;Spaceship&quot;) lte 1&gt;&gt;Hint: click on the link above until the correct answer shows up! &lt;&lt;/if&gt;&gt;
 
-Once you&#39;re ready, [[check your answer|Newtonian Gravity Answer]]</tw-passagedata><tw-passagedata pid="18" name="Newtonian Gravity Answer" tags="" position="750,1400" size="100,100">&lt;&lt;if $answer&gt;&gt; \ 
+Once you&#39;re ready, [[check your answer|Newtonian Gravity Answer]]</tw-passagedata><tw-passagedata pid="18" name="Newtonian Gravity Answer" tags="" position="950,800" size="100,100">&lt;&lt;if $answer&gt;&gt;\ 
 Congradulations, you solved the puzzle! 
 
 If you do indeed possess the ability to do algebra, you might have noticed that the mass of the small orbiting satelite is not required to figure out the orbiting speed of said satelite. 
@@ -269,7 +291,105 @@ If you do indeed possess the ability to do algebra, you might have noticed that 
 Now it&#39;s time to return to your ship. 
 
 [[Spaceship]] &lt;&lt;set $solved++&gt;&gt;&lt;&lt;set $newton to true&gt;&gt;
-&lt;&lt;else&gt;&gt; \
+&lt;&lt;else&gt;&gt;\
+Oops, that is not the correct answer. Would you like to try again? 
+
+&lt;&lt;return &quot;Yes&quot;&gt;&gt; 
+[[No|Spaceship]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Spectroscopy" tags="" position="800,950" size="100,100">Haha, welcome to a puzzle about thermal spectra. 
+
+If two stars have the same surface temperature but one star is larger than the other, how do their wavelength vs. light intensity graphs differ?
+&lt;&lt;cycle &quot;$answer&quot;&gt;&gt;
+    &lt;&lt;option &quot;There is no way to tell; wavelenth vs. light intensity is not based on star size or surface temperature&quot; false&gt;&gt;
+	&lt;&lt;option &quot;Both stars would have the same peak intensity and peak wavelengths&quot; false&gt;&gt;
+	&lt;&lt;option &quot;Both stars would have the same peak intensity but the peak wavelenth of the larger star would be bluer&quot; false&gt;&gt;
+	&lt;&lt;option &quot;Both stars would have the same peak wavelength but the larger star will have a greater intensity at every wavelenth&quot; true&gt;&gt;
+	&lt;&lt;option &quot;The larger star would have a higher peak intensity and have a bluer peak wavelength&quot; false&gt;&gt;
+&lt;&lt;/cycle&gt;&gt;
+&lt;&lt;if visited(&quot;Spaceship&quot;) lte 1&gt;&gt;Hint: click on the link above until the correct answer shows up! &lt;&lt;/if&gt;&gt;
+
+Once you&#39;re ready, [[check your answer|Spectroscopy Answer]]</tw-passagedata><tw-passagedata pid="20" name="Spectroscopy Answer" tags="" position="950,950" size="100,100">&lt;&lt;if $answer&gt;&gt;\ 
+Congradulations, you solved the puzzle! 
+
+Now it&#39;s time to return to your ship. 
+
+[[Spaceship]] &lt;&lt;set $solved++&gt;&gt;&lt;&lt;set $spectra to true&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+Oops, that is not the correct answer. Would you like to try again? 
+
+&lt;&lt;return &quot;Yes&quot;&gt;&gt; 
+[[No|Spaceship]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Doppler Shift" tags="" position="800,1100" size="100,100">Haha, welcome to a puzzle about the effects of doppler shift on light. 
+
+When looking on the emmision spectra of stars, how can you tell if the star is moving towards you?
+&lt;&lt;cycle &quot;$answer&quot;&gt;&gt;
+    &lt;&lt;option &quot;The spectra of the star jumps around erratically with no pattern&quot; false&gt;&gt;
+	&lt;&lt;option &quot;The spectra of the star would undergo no change&quot; false&gt;&gt;
+	&lt;&lt;option &quot;The spectra of the star would appear blue-shifted&quot; true&gt;&gt;
+	&lt;&lt;option &quot;The spectra of the star would appear dimmer&quot; false&gt;&gt;
+	&lt;&lt;option &quot;The spectra of the star would appear red-shifted&quot; false&gt;&gt;
+&lt;&lt;/cycle&gt;&gt;
+&lt;&lt;if visited(&quot;Spaceship&quot;) lte 1&gt;&gt;Hint: click on the link above until the correct answer shows up! &lt;&lt;/if&gt;&gt;
+
+Once you&#39;re ready, [[check your answer|Doppler Shift Answer]]</tw-passagedata><tw-passagedata pid="22" name="Doppler Shift Answer" tags="" position="950,1100" size="100,100">&lt;&lt;if $answer&gt;&gt;\ 
+Congradulations, you solved the puzzle! 
+
+Doppler shifts for most objects in the visible light range are very slight, so that&#39;s what sensitive instruments are for!
+
+Now it&#39;s time to return to your ship. 
+
+[[Spaceship]] &lt;&lt;set $solved++&gt;&gt;&lt;&lt;set $doppler to true&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+Oops, that is not the correct answer. Would you like to try again? 
+
+&lt;&lt;return &quot;Yes&quot;&gt;&gt; 
+[[No|Spaceship]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Star Clusters" tags="" position="800,1250" size="100,100">Haha, welcome to a puzzle about star clusters. 
+
+When looking at star cluster with a lot of bright blue stars, what can you tell about its age?
+&lt;&lt;cycle &quot;$answer&quot;&gt;&gt;
+    &lt;&lt;option &quot;It&#39;s likely fairly young&quot; true&gt;&gt;
+	&lt;&lt;option &quot;It&#39;s likely middle-aged&quot; false&gt;&gt;
+	&lt;&lt;option &quot;It&#39;s likely fairly old&quot; false&gt;&gt;
+	&lt;&lt;option &quot;It&#39;s likely very old&quot; false&gt;&gt;
+	&lt;&lt;option &quot;There is nothing you can definitvely tell about its age&quot; false&gt;&gt;
+&lt;&lt;/cycle&gt;&gt;
+&lt;&lt;if visited(&quot;Spaceship&quot;) lte 1&gt;&gt;Hint: click on the link above until the correct answer shows up! &lt;&lt;/if&gt;&gt;
+
+Once you&#39;re ready, [[check your answer|Star Clusters Answer]]</tw-passagedata><tw-passagedata pid="24" name="Star Clusters Answer" tags="" position="950,1250" size="100,100">&lt;&lt;if $answer&gt;&gt;\ 
+Congradulations, you solved the puzzle! 
+
+Blue stars burn through their fuel very quickly, so if a star cluster still contains blue stars, it&#39;s likely fairly young on a stellar timescale. 
+
+Now it&#39;s time to return to your ship. 
+
+[[Spaceship]] &lt;&lt;set $solved++&gt;&gt;&lt;&lt;set $clusters to true&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+Oops, that is not the correct answer. Would you like to try again? 
+
+&lt;&lt;return &quot;Yes&quot;&gt;&gt; 
+[[No|Spaceship]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Galaxy Classification" tags="" position="800,1400" size="100,100">Haha, welcome to a puzzle about galaxy classification. 
+
+What type of galaxy is likely the endpoint of most galaxies?
+&lt;&lt;cycle &quot;$answer&quot;&gt;&gt;
+    &lt;&lt;option &quot;Mushroom galaxy&quot; false&gt;&gt;
+	&lt;&lt;option &quot;Spiral galaxy&quot; false&gt;&gt;
+	&lt;&lt;option &quot;Elliptical galaxy&quot; true&gt;&gt;
+	&lt;&lt;option &quot;Irregular galaxy&quot; false&gt;&gt;
+	&lt;&lt;option &quot;Very large galaxy&quot; false&gt;&gt;
+&lt;&lt;/cycle&gt;&gt;
+&lt;&lt;if visited(&quot;Spaceship&quot;) lte 1&gt;&gt;Hint: click on the link above until the correct answer shows up! &lt;&lt;/if&gt;&gt;
+
+Once you&#39;re ready, [[check your answer|Galaxy Classification Answer]]</tw-passagedata><tw-passagedata pid="26" name="Galaxy Classification Answer" tags="" position="950,1400" size="100,100">&lt;&lt;if $answer&gt;&gt;\ 
+Congradulations, you solved the puzzle! 
+
+From our best models, it appears that galaxy mergers often end in elliptical galaxies, so that is the likely endpoint of most galaxies that are close enough to their neighbors to interact gravitationally with them.
+
+Now it&#39;s time to return to your ship. 
+
+[[Spaceship]] &lt;&lt;set $solved++&gt;&gt;&lt;&lt;set $galaxies to true&gt;&gt;
+&lt;&lt;else&gt;&gt;\
 Oops, that is not the correct answer. Would you like to try again? 
 
 &lt;&lt;return &quot;Yes&quot;&gt;&gt; 
