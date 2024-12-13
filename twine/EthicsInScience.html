@@ -14,49 +14,76 @@
 by Jake Kao
 for Fall 2024 Ethics in Science at SJSU with Rianna Betzler 
 
-[[Begin]]</tw-passagedata><tw-passagedata pid="2" name="Dictionary" tags="" position="1200,400" size="100,100">(if: (visited: &quot;somatic cell editing&quot;) or (visited: &quot;ethical germline&quot;))[(display: &quot;somatic&quot;) 
+[[Begin]]</tw-passagedata><tw-passagedata pid="2" name="Dictionary" tags="" position="1200,400" size="100,100">(display: &quot;CRISPR-cas9&quot;)
+
+(if: (visited: &quot;somatic cell editing&quot;) or (visited: &quot;ethical germline&quot;))[(display: &quot;somatic&quot;) 
 ]
-(if: (visited: &quot;nonepistemic values&quot;) or (visited: &quot;ethical germline&quot;))[(display: &quot;germline&quot;
-)
+(if: (visited: &quot;nonepistemic values&quot;) or (visited: &quot;ethical germline&quot;))[(display: &quot;germline&quot;)
+]
 (if: (visited: &quot;somatic cell editing&quot;))[(display: &quot;informed consent&quot;) 
 ]
-(if: (visited: &quot;nonepistemic values&quot;))(display: &quot;nonepistemic&quot;)]
+(if: (visited: &quot;nonepistemic values&quot;))[(display: &quot;nonepistemic&quot;) ]
 
 (link-undo: &quot;Back&quot;)</tw-passagedata><tw-passagedata pid="3" name="Begin" tags="" position="900,525" size="100,100">In 2018, He Jiankui, a scientist at the Southern University of Science and Technology in Shenzhen, China, performed a procedure on humans patients that fellow scientists called into question. Using CRISPR-cas9, a biotechnology that is capable of modifying an organism&#39;s genetic code in order to cure genetic diseases, He altered the DNA of twin baby girls while they were still embryos, ensuring that the genetic modifications would pass on to their descendants. 
 
-Today, we are going to explore some of the ethical quandaries surounding the use of this emerging biotechnology in humans. This game is not intended to provide concrete answers, rather, offer some possible ways of approaching the use of CRISPR-cas9 and related technologies in humans.
+Today, we are going to explore some of the ethical quandaries surrounding the use of this emerging biotechnology in humans. This game is not intended to provide concrete answers, rather, offer some possible ways of approaching the use of CRISPR-cas9 and related technologies in humans.
 
-[[Let&#39;s get thinking!|Landing]]</tw-passagedata><tw-passagedata pid="4" name="Landing" tags="" position="900,650" size="100,100">Unexplored quandaries will be listed here. Feel free to browse the [[Dictionary]] and [[Sources]] at any time. 
-
-(if: not (visited: &quot;somatic cell editing&quot;))[ [[somatic cell editing]] ]
-(if: not (visited: &quot;nonepistemic values&quot;))[ [[nonepistemic values]] ]
-(if: not (visited: &quot;dubious testing&quot;))[ [[dubious testing]] ]
-(if: not (visited: &quot;ethical germline&quot;))[ [[ethical germline]] ]
-(event: when exits is 0)[ [[child]] ]</tw-passagedata><tw-passagedata pid="5" name="Sources" tags="" position="1050,400" size="100,100">* [Dennis Normile (2018). “CRISPR bombshell: Chinese researcher claims to have created gene-edited twins: https://www.science.org/content/article/crispr-bombshell-chinese-researcher-claims-have-created-gene-edited-twins]
-* [Broad Institute, //Questions and Answers about CRISPR//: https://www.broadinstitute.org/what-broad/areas-focus/project-spotlight/questions-and-answers-about-crispr]
-* [Katie Hunt (2023), //CNN//, &quot;&quot;: https://www.cnn.com/2023/03/09/health/genome-editing-crispr-whats-next-scn/index.html]
-* [aheleh Heidari, David Martin Shaw, and Bernice Simone Elger (2017). CRISPR and the Rebirth of Synthetic Biology. Science and Engineering Ethics, 23, 351-363: https://link.springer.com/article/10.1007/s11948-016-9768-z]
+[[Let&#39;s get thinking!|Landing]]</tw-passagedata><tw-passagedata pid="4" name="Landing" tags="" position="900,650" size="100,100">Unexplored quandaries will be listed here.  Don&#39;t worry, there won&#39;t be a quiz at the end.
+{
+(if: not (visited: &quot;somatic cell editing&quot;))[ 
+* [[somatic cell editing]] ]
+(if: not (visited: &quot;nonepistemic values&quot;))[ 
+* [[nonepistemic values]] ]
+(if: not (visited: &quot;dubious testing&quot;))[
+* [[dubious testing]] ]
+(if: not (visited: &quot;ethical germline&quot;))[
+* [[ethical germline]] ]
+(event: when exits &lt; 3)[
+* [[child effect]] ] &lt;!-- Footer has exits --&gt;
+}</tw-passagedata><tw-passagedata pid="5" name="Sources" tags="" position="1050,400" size="100,100">* [Dennis Normile (2018). “CRISPR bombshell: Chinese researcher claims to have created gene-edited twins, https://www.science.org/content/article/crispr-bombshell-chinese-researcher-claims-have-created-gene-edited-twins]
+* [Broad Institute, //Questions and Answers about CRISPR//, https://www.broadinstitute.org/what-broad/areas-focus/project-spotlight/questions-and-answers-about-crispr]
+* [Katie Hunt (2023), //How human gene editing is moving on after the CRISPR baby scandal//,  CNN, https://www.cnn.com/2023/03/09/health/genome-editing-crispr-whats-next-scn/index.html]
+* [Julia Hollingsworth and Isaac Yee (2019), //Chinese scientist who edited genes of twin babies is jailed for 3 years//, CNN,  https://www.cnn.com/2019/12/30/china/gene-scientist-china-intl-hnk/index.html]
+* [aheleh Heidari, David Martin Shaw, and Bernice Simone Elger (2017). //CRISPR and the Rebirth of Synthetic Biology.// Science and Engineering Ethics, 23, 351-363, https://link.springer.com/article/10.1007/s11948-016-9768-z]
 
 (link-undo: &quot;Back&quot;)</tw-passagedata><tw-passagedata pid="6" name="Startup" tags="startup" position="750,400" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="somatic cell editing" tags="" position="1050,650" size="100,100">Is [[somatic]] cell gene editing therapy ethical? 
 
 (link-reveal: &quot;Yes&quot;)[(set: $answers to it + 1) 
-* Anything that goes wrong from such a therapy only physically affects the original patient(s). If the original patient(s) gave [[informed consent]] for the somatic cell gene editing therapy, then the concequences of gene therapy going wrong are similar to the concequences of traditional,. non-gene editing therapies going wrong, such as sugery or medication. In this case, as long as the informed consent included possible side effects of somatic cell gene therapy, it is as ethical as any other therapy. 
+* Anything that goes wrong from such a therapy only physically affects the original patient(s). If the original patient(s) gave [[informed consent]] for the somatic cell gene editing therapy, then the consequences of gene therapy going wrong are similar to the consequences of traditional,. non-gene editing therapies going wrong, such as sugery or medication. In this case, as long as the informed consent included possible side effects of somatic cell gene therapy, it is as ethical as any other therapy. 
 ** The side-effects of gene therapy, even somatic cell ones, are often difficult to predict and therefore difficult to inform patients about. How informed is sufficiently informed for a patient to consent? ]
 
 (link-reveal: &quot;No&quot;)[(set: $answers to it + 1)
-* We shouldn&#39;t mess with genetics in humans, even if those changes won&#39;t be passed on to future generations. The risk is too great. 
+* We shouldn&#39;t mess with genetics in humans, even if those changes won&#39;t be passed on to future generations. The risk of harm is too great. 
 ** What about the risks of drug therapies or surgical therapies? Are the risks comparable in some fashion? ]
 
 (link-reveal: &quot;Only for conditions where there are no other treatments&quot;)[(set: $answers to it + 1)
-* What happens if (when) non-genetic therapies are discovered? Under this stance, would such a discovery render the gene therapy for this condition unethical? 
+* What happens if (when) non-genetic therapies are discovered? Under this stance, would such a discovery render existing gene therapy for this condition unethical? 
 * How effective does the non-genetic therapy have to be to supersede the gene editing treatment? ]
 
-(event: when $answers is 3)[Return to [[Hub|Landing]].]</tw-passagedata><tw-passagedata pid="8" name="child" tags="" position="900,775" size="100,100">[[End]]</tw-passagedata><tw-passagedata pid="9" name="somatic" tags="" position="1200,525" size="100,100">**Somatic**: somatic cells are cells in the body that make up the parts of the body that are not gametes. Modifications to somatic cells will not pass on to descendants.</tw-passagedata><tw-passagedata pid="10" name="informed consent" tags="" position="1200,650" size="100,100">**Informed consent**: in human medicine, healthcare professionals and researchers have to disclose sufficient information to the patient about the outcomes and risks associated with medical procedures and the patient needs to understand and agree to these outcomes and risks before starting the procedure. This agreement can be revoked by both the doctor or the patient at any time during the treatment. </tw-passagedata><tw-passagedata pid="11" name="End" tags="" position="900,900" size="100,100">Thank you for playing through my short philosophical rumination on the ehtics of human genetic modification with CRISPR-cas9 and similar technologies. I hope this experience has opened your eyes to the nuances of these types of discussions. 
+(event: when $answers is 3)[Return to [[Hub|Landing]].]</tw-passagedata><tw-passagedata pid="8" name="child effect" tags="" position="900,775" size="100,100">In 2019, it was found that He and his scientific associates blatantly disregarded legal and ethical regulations in order to profit off the genetic modification of embryos. He was sentenced to 3 years in prison, subjected to a fine equivalent to $430,000 USD, and banned from conducting similar research in the future. 
 
-[[Exit</tw-passagedata><tw-passagedata pid="12" name="dubious testing" tags="" position="1050,900" size="100,100">While premature and ethically dubious testing on humans can set back future genetic therapy advancements, the results of such experimentation could help patients suffering //now//.  Should such experimentation procede despite the risks? 
+Modification of [[germline]] cells is illegal or heavily restricted in many countries, including China, the United States, and the United Kingdom. 
+
+What should be done about the children created from germline genetic modification that is found to be unethical after they are born? 
+
+(link-reveal: &quot;Kill the child&quot;)[(set: $answers to it + 1)
+* The child was created as part of an unethical experiment. It shouldn&#39;t exist in the first place. 
+** But the child didn&#39;t do anything wrong. They didn&#39;t choose to be a part of this experiment. It also doesn&#39;t seem right to kill them for the mistakes of their parents and the researchers. ]
+
+(link-reveal: &quot;Sterilize the child&quot;)[(set: $answers to it + 1) 
+* Sterilizing the child will minimize the potential harm that could be caused by side effects of their genetic modification to only themself, just like with [[somatic]] genetic modification.
+** This removes the child&#39;s choice to have biological children in the future, which can be seen as a violation of human rights.]
+
+(link-reveal: &quot;Do nothing&quot;)[(set: $answers to it + 1)
+* The child has done nothing wrong, and like any other human being, has the right to live unimpeded, with the choice to procreate if desired.
+** The effects of their genetic modification may cause problems for future humans if it is passed on to their descendants. There could also be no noticeable side effects whatsoever. ]
+
+(event: when $answers is 3)[Easy, [[don&#39;t|End]] perform unethical experiments! ]</tw-passagedata><tw-passagedata pid="9" name="somatic" tags="" position="1200,525" size="100,100">**Somatic**: somatic cells are cells in the body that make up the parts of the body that are not gametes. Modifications to somatic cells will not pass on to descendants.</tw-passagedata><tw-passagedata pid="10" name="informed consent" tags="" position="1200,650" size="100,100">**Informed consent**: in human medicine, healthcare professionals and researchers have to disclose sufficient information to the patient about the outcomes and risks associated with medical procedures and the patient needs to understand and agree to these outcomes and risks before starting the procedure. This agreement can be revoked by both the doctor or the patient at any time during the treatment. </tw-passagedata><tw-passagedata pid="11" name="End" tags="" position="900,900" size="100,100">Thank you for playing through my short philosophical rumination on the ethics of human genetic modification with CRISPR-cas9 and similar technologies. I hope this experience has opened your eyes to the nuances of these types of discussions. 
+
+The end!</tw-passagedata><tw-passagedata pid="12" name="dubious testing" tags="" position="1050,900" size="100,100">While premature and ethically dubious testing on humans can set back future genetic therapy advancements, the results of such experimentation could help patients suffering //now//.  Should such experimentation proceed despite the risks? 
 
 (link-reveal: &quot;No&quot;)[(set: $answers to it + 1)
-* Future, properly ethical research has the potential to help a lot more people, especially if the premature and ethically dubious research gets further research halted due to loss in public trust. The good of all the people benefiting from future research outweights the potential good that the currently suffering may or may not get. ]
+* Future, properly ethical research has the potential to help a lot more people, especially if the premature and ethically dubious research gets further research halted due to loss in public trust. The good of all the people benefiting from future research outweighs the potential good that the currently suffering may or may not get. ]
 
 (link-reveal: &quot;Yes&quot;)[(set: $answers to it + 1)
 * Inaction that causes harm is doing harm. If there is a chance to help someone //now//, it should be taken. 
@@ -65,16 +92,17 @@ Today, we are going to explore some of the ethical quandaries surounding the use
 (event: when $answers is 2)[Return to [[Hub|Landing]].]</tw-passagedata><tw-passagedata pid="13" name="ethical germline" tags="" position="1050,1025" size="100,100">When are genetic modifications that take effect in [[germline]] cells ethical (if ever)? 
 
 (link-reveal: &quot;Never&quot;)[(set: $answers to it + 1)
-* As we will never understand the full concequences of germline genetic modifications, it is never ethical to perform such therapies on humans.
-** The human genome, in all its error-ridden complexity, is UNESCO World Heritage, and should not be tampered with in a way that can be passed down to descendents in purpetuity. ]
+* As we will never understand the full consequences of germline genetic modifications, it is never ethical to perform such therapies on humans.
+** The human genome, in all its error-ridden complexity, is UNESCO World Heritage, and should not be tampered with in a way that can be passed down to descendants in perpetuity. ]
 
 (link-reveal: &quot;When there is sufficient knowledge&quot;)[(set: $answers to it + 1)
-* How much data do we need to collect on the ways that a specific somatic gene therapy bahaves before we deem it sufficient to make such a therapy available for the germline? 
-** Perhaps after a generation or two
-]
+* How much data do we need to collect on the ways that a specific somatic gene therapy behaves before we deem it sufficient to make such a therapy available for the germline? 
+** Perhaps after a generation or two of collecting data on the side-effects of a specific somatic gene therapy, that will give us sufficient confidence that offering a germline version of this therapy will most likely not cause harm, since the UNESCO guidelines are unclear as to whether genetic defects in the human genome are worth protecting. ]
 
 (link-reveal: &quot;Always&quot;)[
-* I don&#39;t have a good reason for this answer, I just wanted to be evil 😈  ]</tw-passagedata><tw-passagedata pid="14" name="nonepistemic values" tags="" position="1050,775" size="100,100">What types of [[nonepistemic]] values should enter genome editing research in humans ([[somatic]] or [[germline]])? 
+* I don&#39;t have a good reason for this answer, I just wanted to be evil 😈  ]
+
+(event: when $answers is 2)[Return to [[Hub|Landing]].]</tw-passagedata><tw-passagedata pid="14" name="nonepistemic values" tags="" position="1050,775" size="100,100">What types of [[nonepistemic]] values should enter genome editing research in humans ([[somatic]] or [[germline]])? 
 
 (link-reveal: &quot;Monetary reasons or fame&quot;)[(set: $answers to it + 1)
 * Scientists live within capitalistic societies and require a minimum amount of money to afford a basic living standard, and scientists are human beings who have a minimum psychological need for external validation, though both of these can be different from person to person and exact amounts can be debated.
@@ -82,13 +110,13 @@ Today, we are going to explore some of the ethical quandaries surounding the use
 
 (link-reveal: &quot;Availability of other treatments&quot;)[(set: $answers to it + 1)
 * Given the inherent risks of genome editing treatments, it would be more acceptable to use gene therapy to treat ailments where traditional treatments are not available or very ineffective in order to affect the largest amount of change in individual patient outcomes. 
-* Perhapse priority of research should be given to conditions that are most condusive to CRISPR-cas9 and simlar technologies, such as diseases that are single gene expression, a dominant trait, etc. in order bring more therapies to market faster, giving the scientific community moredata points of successful therapies to build upon. 
+* Perhapse priority of research should be given to conditions that are most condusive to [[CRISPR-cas9]] and simlar technologies, such as diseases that are single gene expression, a dominant trait, etc. in order bring more therapies to market faster, giving the scientific community moredata points of successful therapies to build upon. 
 ** What type of balance should be struck between these two concerns (individual outcomes vs. more therapies)? ]
 
 (event: when $answers is 2)[Return to [[Hub|Landing]].]</tw-passagedata><tw-passagedata pid="15" name="nonepistemic" tags="" position="1200,775" size="100,100">**Nonepistemic**: nonepistemic values are values, cultural norms and considerations, that help determine what science we do, how the science is done, who does the science, </tw-passagedata><tw-passagedata pid="16" name="germline" tags="" position="1200,900" size="100,100">**Germline**: germline cells are cells in the body that develope into gametes for reproduction. Modifications to germline cells will pass on to descendants. </tw-passagedata><tw-passagedata pid="17" name="Footer" tags="footer" position="750,650" size="100,100">----
 [[Dictionary]] | [[Sources]]
 </tw-passagedata><tw-passagedata pid="18" name="Header" tags="header" position="750,525" size="100,100">Jake Kao | Phil 133 | Fall 2024 (set: $answers to 0)
-----</tw-passagedata></tw-storydata>
+----</tw-passagedata><tw-passagedata pid="19" name="CRISPR-cas9" tags="" position="1200,1025" size="100,100">**CRISPR-cas9**: CRISPR-cas9 and related technologies enable the creation of targeted gene therapies that can swap out a given genetic sequence with one designed by humans. There are inherent risks in the gene-editing phase of the procedure, such as cancer, and the new genes can cause unintended side-effects. </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
